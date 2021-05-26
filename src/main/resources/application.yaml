@@ -1,0 +1,18 @@
+quarkus:
+  banner:
+    enabled: false
+  log:
+    level: INFO
+
+"%test":
+  quarkus:
+    log:
+      category:
+        "com.kubetrade":
+          level: DEBUG
+    hibernate-orm:
+      log:
+        sql: true
+    flyway:
+      migrate-at-start: true
+      locations: db/migration,db/testdata
